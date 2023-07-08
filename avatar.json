@@ -2,5 +2,9 @@
     "name": "Sora",
     "description": "Sora from Sewayaki Kitsune no Senko-san",
     "author": "Gakuto1112",
-	"version": "0.1.0"
+	"version": "0.1.0",
+    "color": "724c70",
+    "autoScripts": [
+		"scripts/index.lua"
+	]
 }
