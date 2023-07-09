@@ -11,16 +11,16 @@
 		"models.main.Avatar.Torso.Body.BodyBottom": {
 			"parentType": "None"
 		},
-		"models.main.Avatar.Torso.Body.BodyBottom.Legs.RightLeg.RightLegBottom": {
-			"parentType": "None"
-		},
-		"models.main.Avatar.Torso.Body.BodyBottom.Legs.LeftLeg.LeftLegBottom": {
-			"parentType": "None"
-		},
 		"models.main.Avatar.Torso.Arms.RightArm.RightArmBottom": {
 			"parentType": "None"
 		},
 		"models.main.Avatar.Torso.Arms.LeftArm.LeftArmBottom": {
+			"parentType": "None"
+		},
+        "models.main.Avatar.Legs.RightLeg.RightLegBottom": {
+			"parentType": "None"
+		},
+		"models.main.Avatar.Legs.LeftLeg.LeftLegBottom": {
 			"parentType": "None"
 		}
     }
