@@ -6,6 +6,7 @@ events.ENTITY_INIT:register(function ()
 	KeyManager = require("scripts.key_manager")
 
 	--抽象クラス
+	EmotionAction = require("scripts.actions.emotion_action")
 
 	--パーツ別クラス
 	require("scripts.vanilla_model")
@@ -20,5 +21,11 @@ events.ENTITY_INIT:register(function ()
 
 	--機能別クラス
 	Hurt = require("scripts.hurt")
+	ActionManager = require("scripts.action_manager")
+	require("scripts.emote_keys")
+	KeyEmoteUp = require("scripts.actions.key_emote_up")
+	KeyEmoteRight = require("scripts.actions.key_emote_right")
+	KeyEmoteDown = require("scripts.actions.key_emote_down")
+	KeyEmoteLeft = require("scripts.actions.key_emote_left")
 
 end)
