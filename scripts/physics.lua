@@ -95,7 +95,7 @@ events.RENDER:register(function (_, context)
 			end
 		end
 	end
-	for index, modelPart in ipairs(models.models.main.Avatar.UpperBody.Body.BodyBottom.Tails:getChildren()) do
+	for index, modelPart in ipairs(models.models.main.Avatar.UpperBody.Body.Tails:getChildren()) do
 		modelPart:setRot(tailRot + Physics.TailRotOffset + vectors.vec3(index >= 3 and 20 or -20, index % 2 == 1 and -20 or 20))
 	end
 end)

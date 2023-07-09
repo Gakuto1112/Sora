@@ -8,9 +8,6 @@
 		"scripts/index.lua"
 	],
     "customizations": {
-		"models.main.Avatar.UpperBody.Body.BodyBottom": {
-			"parentType": "None"
-		},
 		"models.main.Avatar.UpperBody.Arms.RightArm.RightArmBottom": {
 			"parentType": "None"
 		},
