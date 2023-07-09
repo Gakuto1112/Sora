@@ -1,6 +1,9 @@
 events.ENTITY_INIT:register(function ()
 	--クラスのインスタンス化
 	General = require("scripts.general")
+	Config = require("scripts.config")
+	Language = require("scripts.language")
+	KeyManager = require("scripts.key_manager")
 
 	--抽象クラス
 
@@ -9,6 +12,7 @@ events.ENTITY_INIT:register(function ()
 	Sleeve = require("scripts.sleeve")
 	Hem = require("scripts.hem")
 	Physics = require("scripts.physics")
+	Ears = require("scripts.ears")
 
 	--機能別クラス
 
