@@ -3,10 +3,12 @@
 Language = {
 	LanguageData = {
 		en_us = {
-			key_name__jerk_ears = "Jerk ears"
+			key_name__jerk_ears = "Jerk ears",
+			key_name__wag_tail = "Wag tails"
 		},
 		ja_jp = {
-			key_name__jerk_ears = "耳をピクピクする"
+			key_name__jerk_ears = "耳を動かす",
+			key_name__wag_tail = "尻尾を振る"
 		}
 	},
 

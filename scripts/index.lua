@@ -12,6 +12,7 @@ events.ENTITY_INIT:register(function ()
 	Sleeve = require("scripts.sleeve")
 	Hem = require("scripts.hem")
 	Physics = require("scripts.physics")
+	Tail = require("scripts.tail")
 	Ears = require("scripts.ears")
 
 	--機能別クラス
