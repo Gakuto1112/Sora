@@ -8,19 +8,19 @@
 		"scripts/index.lua"
 	],
     "customizations": {
-		"models.main.Avatar.Torso.Body.BodyBottom": {
+		"models.main.Avatar.UpperBody.Body.BodyBottom": {
 			"parentType": "None"
 		},
-		"models.main.Avatar.Torso.Arms.RightArm.RightArmBottom": {
+		"models.main.Avatar.UpperBody.Arms.RightArm.RightArmBottom": {
 			"parentType": "None"
 		},
-		"models.main.Avatar.Torso.Arms.LeftArm.LeftArmBottom": {
+		"models.main.Avatar.UpperBody.Arms.LeftArm.LeftArmBottom": {
 			"parentType": "None"
 		},
-        "models.main.Avatar.Legs.RightLeg.RightLegBottom": {
+        "models.main.Avatar.LowerBody.RightLeg.RightLegBottom": {
 			"parentType": "None"
 		},
-		"models.main.Avatar.Legs.LeftLeg.LeftLegBottom": {
+		"models.main.Avatar.LowerBody.LeftLeg.LeftLegBottom": {
 			"parentType": "None"
 		}
     }

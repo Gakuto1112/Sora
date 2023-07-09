@@ -5,22 +5,22 @@ Hem = {
 
 	---エプロンを有効にする。
 	enable = function ()
-		models.models.main.Avatar.Torso.Body.BodyBottom.Hem:setVisible(true)
+		models.models.main.Avatar.UpperBody.Body.BodyBottom.Hem:setVisible(true)
 		events.RENDER:remove("hem_render")
 		events.RENDER:register(function ()
 			if player:isCrouching() then
-				models.models.main.Avatar.Torso.Body.BodyBottom.Hem:setRot(vectors.vec3(math.min(vanilla_model.RIGHT_LEG:getOriginRot().x, vanilla_model.LEFT_LEG:getOriginRot().x) + 30) + Hem.RotOffset)
-				models.models.main.Avatar.Torso.Body.BodyBottom.Hem:offsetPivot(0, -1, 1)
+				models.models.main.Avatar.UpperBody.Body.BodyBottom.Hem:setRot(vectors.vec3(math.min(vanilla_model.RIGHT_LEG:getOriginRot().x, vanilla_model.LEFT_LEG:getOriginRot().x) + 30) + Hem.RotOffset)
+				models.models.main.Avatar.UpperBody.Body.BodyBottom.Hem:offsetPivot(0, -1, 1)
 			else
-				models.models.main.Avatar.Torso.Body.BodyBottom.Hem:setRot(vectors.vec3(math.min(vanilla_model.RIGHT_LEG:getOriginRot().x, vanilla_model.LEFT_LEG:getOriginRot().x)) + Hem.RotOffset)
-				models.models.main.Avatar.Torso.Body.BodyBottom.Hem:offsetPivot()
+				models.models.main.Avatar.UpperBody.Body.BodyBottom.Hem:setRot(vectors.vec3(math.min(vanilla_model.RIGHT_LEG:getOriginRot().x, vanilla_model.LEFT_LEG:getOriginRot().x)) + Hem.RotOffset)
+				models.models.main.Avatar.UpperBody.Body.BodyBottom.Hem:offsetPivot()
 			end
 		end, "hem_render")
 	end,
 
 	---裾を無効にする。
 	disable = function ()
-		models.models.main.Avatar.Torso.Body.BodyBottom.Hem:setVisible(false)
+		models.models.main.Avatar.UpperBody.Body.BodyBottom.Hem:setVisible(false)
 		events.RENDER:remove("hem_render")
 	end
 }

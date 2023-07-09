@@ -54,7 +54,7 @@ events.RENDER:register(function (_, context)
 		table.insert(Physics.VelocityData[3], velocityHeadRight)
 		Physics.VelocityAverage[4] = (#Physics.VelocityData[4] * Physics.VelocityAverage[4] + velocityHeadRot) / (#Physics.VelocityData[4] + 1)
 		table.insert(Physics.VelocityData[4], velocityHeadRot)
-		local velocityBodyFront, velocityBodyRight, velocityBodyRot = decomposeHorizontalVelocity((player:getBodyYaw() + models.models.main.Avatar.Torso.Body:getTrueRot().y - 90) % 360 - 180, 2)
+		local velocityBodyFront, velocityBodyRight, velocityBodyRot = decomposeHorizontalVelocity((player:getBodyYaw() + models.models.main.Avatar.UpperBody.Body:getTrueRot().y - 90) % 360 - 180, 2)
 		Physics.VelocityAverage[5] = (#Physics.VelocityData[5] * Physics.VelocityAverage[5] + velocityBodyFront) / (#Physics.VelocityData[5] + 1)
 		table.insert(Physics.VelocityData[5], velocityBodyFront)
 		Physics.VelocityAverage[6] = (#Physics.VelocityData[6] * Physics.VelocityAverage[6] + velocityBodyRight) / (#Physics.VelocityData[6] + 1)
@@ -95,7 +95,7 @@ events.RENDER:register(function (_, context)
 			end
 		end
 	end
-	for index, modelPart in ipairs(models.models.main.Avatar.Torso.Body.BodyBottom.Tails:getChildren()) do
+	for index, modelPart in ipairs(models.models.main.Avatar.UpperBody.Body.BodyBottom.Tails:getChildren()) do
 		modelPart:setRot(tailRot + Physics.TailRotOffset + vectors.vec3(index >= 3 and 20 or -20, index % 2 == 1 and -20 or 20))
 	end
 end)
