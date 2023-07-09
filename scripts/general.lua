@@ -19,9 +19,27 @@
 ]]
 
 ---@class General 他の複数のクラスが参照するフィールドや関数を定義するクラス
+---@field EffectChecked boolean このチックにステータスエフェクトを取得したかどうか
+---@field EffectTable table<string, HostAPI.statusEffect> ステータスエフェクトを保持する変数
 ---@field PlayerCondition ConditionLevel プレイヤーの体力・満腹度の度合い
 General = {
+	EffectChecked = false,
+	EffectTable = {},
 	PlayerCondition = "HIGH",
+
+	---指定されたステータス効果の情報を返す。指定されたステータス効果が付与されていない場合はnilが返される。
+	---@param name string ステータス効果
+	---@return table|nil status ステータス効果の情報（該当のステータスを受けていない場合はnilが返る。）
+	getTargetEffect = function (name)
+		if not General.EffectChecked and host:isHost() then
+			General.EffectTable = {}
+			for _, effect in ipairs(host:getStatusEffects()) do
+				General.EffectTable[effect.name:match("^effect%.(.+)$")] = {duration = effect.duration, amplifier = effect.amplifier, visible = effect.visible}
+			end
+			General.EffectChecked = true
+		end
+		return General.EffectTable[name]
+	end
 }
 
 events.TICK:register(function ()

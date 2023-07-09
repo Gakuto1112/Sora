@@ -11,10 +11,12 @@ events.ENTITY_INIT:register(function ()
 	require("scripts.vanilla_model")
 	Sleeve = require("scripts.sleeve")
 	Hem = require("scripts.hem")
+	FaceParts = require("scripts.face_parts")
 	Physics = require("scripts.physics")
 	Tail = require("scripts.tail")
 	Ears = require("scripts.ears")
 
 	--機能別クラス
+	Hurt = require("scripts.hurt")
 
 end)
