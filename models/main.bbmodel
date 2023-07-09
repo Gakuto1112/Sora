@@ -4539,7 +4539,7 @@
 								},
 								{
 									"name": "BackHair",
-									"origin": [0, 24, 0],
+									"origin": [0, 24, 2],
 									"color": 0,
 									"uuid": "7def0a67-6041-7b11-277d-df63ab4bba1f",
 									"export": true,
