@@ -19,6 +19,10 @@
 		},
 		"models.main.Avatar.LowerBody.LeftLeg.LeftLegBottom": {
 			"parentType": "None"
+		},
+        "models.umbrella.UmbrellaB": {
+			"moveTo": "models.main.Avatar.UpperBody.Body",
+			"visible": false
 		}
     }
 }
