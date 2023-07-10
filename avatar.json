@@ -20,6 +20,14 @@
 		"models.main.Avatar.LowerBody.LeftLeg.LeftLegBottom": {
 			"parentType": "None"
 		},
+		"models.naginata.RightNaginata": {
+			"moveTo": "models.main.Avatar.UpperBody.Arms.RightArm.RightArmBottom",
+			"visible": false
+		},
+		"models.naginata.LeftNaginata": {
+			"moveTo": "models.main.Avatar.UpperBody.Arms.LeftArm.LeftArmBottom",
+			"visible": false
+		},
         "models.umbrella.UmbrellaB": {
 			"moveTo": "models.main.Avatar.UpperBody.Body",
 			"visible": false

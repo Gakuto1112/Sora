@@ -17,6 +17,7 @@ events.ENTITY_INIT:register(function ()
 	Physics = require("scripts.physics")
 	Tail = require("scripts.tail")
 	Ears = require("scripts.ears")
+	Naginata = require("scripts.naginata")
 	Umbrella = require("scripts.umbrella")
 
 	--機能別クラス

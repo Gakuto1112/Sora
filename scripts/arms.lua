@@ -29,8 +29,8 @@ Arms = {
 
 events.TICK:register(function ()
 	local leftHanded = player:isLeftHanded()
-	models.models.main.Avatar.UpperBody.Arms.RightArm:setParentType(((Umbrella.IsUsing and leftHanded) --[[or Naginata.State[1] >= 2 or Naginata.State[2] >= 2]]) and "Body" or "RightArm")
-	models.models.main.Avatar.UpperBody.Arms.LeftArm:setParentType(((Umbrella.IsUsing and not leftHanded) --[[or Naginata.State[1] >= 2 or Naginata.State[2] >= 2]]) and "Body" or "LeftArm")
+	models.models.main.Avatar.UpperBody.Arms.RightArm:setParentType(((Umbrella.IsUsing and leftHanded) or Naginata.State[1] >= 2 or Naginata.State[2] >= 2) and "Body" or "RightArm")
+	models.models.main.Avatar.UpperBody.Arms.LeftArm:setParentType(((Umbrella.IsUsing and not leftHanded) or Naginata.State[1] >= 2 or Naginata.State[2] >= 2) and "Body" or "LeftArm")
 end)
 
 events.RENDER:register(function ()

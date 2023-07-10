@@ -22,7 +22,7 @@ events.TICK:register(function ()
 		if not Umbrella.IsUsingPrev and Umbrella.Sound then
 			sounds:playSound("minecraft:entity.bat.takeoff", player:getPos(), 0.5, 1.5)
 		end
-		if --[[Naginata.State[1] <= 1 and Naginata.State[2] <= 1]] true then
+		if Naginata.State[1] <= 1 and Naginata.State[2] <= 1 then
 			if leftHanded then
 				models.models.main.Avatar.UpperBody.Body.UmbrellaB:setPos(5.5)
 			else
