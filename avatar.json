@@ -2,34 +2,34 @@
     "name": "Sora",
     "description": "Sora from Sewayaki Kitsune no Senko-san",
     "author": "Gakuto1112",
-	"version": "0.1.0",
+	"version": "0.1.1",
     "color": "724c70",
     "autoScripts": [
 		"scripts/index.lua"
 	],
     "customizations": {
-		"models.main.Avatar.UpperBody.Arms.RightArm.RightArmBottom": {
+		"models.models.main.Avatar.UpperBody.Arms.RightArm.RightArmBottom": {
 			"parentType": "None"
 		},
-		"models.main.Avatar.UpperBody.Arms.LeftArm.LeftArmBottom": {
+		"models.models.main.Avatar.UpperBody.Arms.LeftArm.LeftArmBottom": {
 			"parentType": "None"
 		},
-        "models.main.Avatar.LowerBody.RightLeg.RightLegBottom": {
+        "models.models.main.Avatar.LowerBody.RightLeg.RightLegBottom": {
 			"parentType": "None"
 		},
-		"models.main.Avatar.LowerBody.LeftLeg.LeftLegBottom": {
+		"models.models.main.Avatar.LowerBody.LeftLeg.LeftLegBottom": {
 			"parentType": "None"
 		},
-		"models.naginata.RightNaginata": {
-			"moveTo": "models.main.Avatar.UpperBody.Arms.RightArm.RightArmBottom",
+		"models.models.naginata.RightNaginata": {
+			"moveTo": "models.models.main.Avatar.UpperBody.Arms.RightArm.RightArmBottom",
 			"visible": false
 		},
-		"models.naginata.LeftNaginata": {
-			"moveTo": "models.main.Avatar.UpperBody.Arms.LeftArm.LeftArmBottom",
+		"models.models.naginata.LeftNaginata": {
+			"moveTo": "models.models.main.Avatar.UpperBody.Arms.LeftArm.LeftArmBottom",
 			"visible": false
 		},
-        "models.umbrella.UmbrellaB": {
-			"moveTo": "models.main.Avatar.UpperBody.Body",
+        "models.models.umbrella.UmbrellaB": {
+			"moveTo": "models.models.main.Avatar.UpperBody.Body",
 			"visible": false
 		}
     }
