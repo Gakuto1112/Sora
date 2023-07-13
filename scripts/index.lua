@@ -28,5 +28,6 @@ events.ENTITY_INIT:register(function ()
 	KeyEmoteRight = require("scripts.actions.key_emote_right")
 	KeyEmoteDown = require("scripts.actions.key_emote_down")
 	KeyEmoteLeft = require("scripts.actions.key_emote_left")
+	FoxFire = require("scripts.fox_fire")
 
 end)

@@ -59,6 +59,9 @@ events.TICK:register(function ()
 	local healthPercent = player:getHealth() / player:getMaxHealth()
 	local satisfactionPercent = player:getFood() / 20
 	General.PlayerCondition = player:getFrozenTicks() == 140 and "LOW" or (((healthPercent > 0.5 and satisfactionPercent > 0.3) or (gamemode == "CREATIVE" or gamemode == "SPECTATOR")) and "HIGH" or ((healthPercent > 0.2 and satisfactionPercent > 0) and "MEDIUM" or "LOW"))
+	if not client:isPaused() then
+		General.EffectChecked = false
+	end
 end)
 
 return General

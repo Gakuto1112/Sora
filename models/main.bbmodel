@@ -4152,7 +4152,7 @@
 			"uuid": "27fd278a-6841-0eef-c271-5204938d763d",
 			"export": true,
 			"mirror_uv": false,
-			"isOpen": true,
+			"isOpen": false,
 			"locked": false,
 			"visibility": true,
 			"autouv": 0,
@@ -4879,6 +4879,85 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "FoxFireAnchors",
+			"origin": [0, 16, 0],
+			"color": 0,
+			"uuid": "f18f91a3-7914-7e2c-c47e-917f3cfa0c15",
+			"export": true,
+			"mirror_uv": false,
+			"isOpen": true,
+			"locked": false,
+			"visibility": true,
+			"autouv": 0,
+			"children": [
+				{
+					"name": "FoxFireAnchor1",
+					"origin": [0, 38, 0],
+					"color": 0,
+					"uuid": "b4c081c3-13bf-ac8f-96ca-c89f294dc176",
+					"export": true,
+					"mirror_uv": false,
+					"isOpen": false,
+					"locked": false,
+					"visibility": true,
+					"autouv": 0,
+					"children": []
+				},
+				{
+					"name": "FoxFireAnchor2",
+					"origin": [12, 24, 0],
+					"color": 0,
+					"uuid": "f9ce2ba7-e7be-f422-d796-aa6e977eb9a7",
+					"export": true,
+					"mirror_uv": false,
+					"isOpen": false,
+					"locked": false,
+					"visibility": true,
+					"autouv": 0,
+					"children": []
+				},
+				{
+					"name": "FoxFireAnchor3",
+					"origin": [-12, 12, 0],
+					"color": 0,
+					"uuid": "63491a81-f744-bf43-aa0c-6fe98b2a4268",
+					"export": true,
+					"mirror_uv": false,
+					"isOpen": false,
+					"locked": false,
+					"visibility": true,
+					"autouv": 0,
+					"children": []
+				},
+				{
+					"name": "FoxFireAnchor4",
+					"origin": [16, 12, 10],
+					"color": 0,
+					"uuid": "fddaaff0-cf0c-3d8f-7366-0088b6a5a600",
+					"export": true,
+					"mirror_uv": false,
+					"isOpen": true,
+					"locked": false,
+					"visibility": true,
+					"autouv": 0,
+					"children": []
+				},
+				{
+					"name": "FoxFireAnchor5",
+					"origin": [-16, 24, 10],
+					"color": 0,
+					"uuid": "467ec718-9b07-cc61-f20d-64fdaa8ac0ec",
+					"export": true,
+					"mirror_uv": false,
+					"isOpen": true,
+					"locked": false,
+					"visibility": true,
+					"autouv": 0,
+					"children": []
 				}
 			]
 		}

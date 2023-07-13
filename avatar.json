@@ -20,6 +20,9 @@
 		"models.models.main.Avatar.LowerBody.LeftLeg.LeftLegBottom": {
 			"parentType": "None"
 		},
+		"models.models.main.FoxFireAnchors": {
+			"parentType": "World"
+		},
 		"models.models.naginata.RightNaginata": {
 			"moveTo": "models.models.main.Avatar.UpperBody.Arms.RightArm.RightArmBottom",
 			"visible": false
@@ -31,6 +34,9 @@
         "models.models.umbrella.UmbrellaB": {
 			"moveTo": "models.models.main.Avatar.UpperBody.Body",
 			"visible": false
+		},
+		"models.models.fox_fire": {
+			"primaryRenderType": "EMISSIVE_SOLID"
 		}
     }
 }

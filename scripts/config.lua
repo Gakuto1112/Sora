@@ -40,9 +40,25 @@ Config = {
 }
 
 --ping関数
+---アバター設定を他Figuraクライアントと同期する。
+---@param umbrellaSound boolean 傘の開閉音を再生するかどうか
+---@param alwaysUmbrella boolean 傘をずっとさしているかどうか
+---@param nightVisiton boolean 暗視が付与されているかどうか
+---@param drowned boolean 溺れているかどうか
+function pings.syncAvatarConfig(umbrellaSound, alwaysUmbrella, nightVisiton, drowned)
+	if not Config.IsSynced then
+		Umbrella.Sound = umbrellaSound
+		Umbrella.AlwaysUse = alwaysUmbrella
+		FoxFire.NightVision = nightVisiton
+		FaceParts.Drowned = drowned
+		Config.IsSynced = true
+	end
+end
+
 
 events.TICK:register(function ()
 	if Config.NextSyncCount == 0 then
+		pings.syncAvatarConfig(Umbrella.Sound, Umbrella.AlwaysUse, FoxFire.NightVision, FaceParts.Drowned)
 		Config.NextSyncCount = 300
 	else
 		Config.NextSyncCount = Config.NextSyncCount - 1
