@@ -22,6 +22,7 @@ events.ENTITY_INIT:register(function ()
 
 	--機能別クラス
 	Hurt = require("scripts.hurt")
+	ActionWheel = require("scripts.action_wheel")
 	ActionManager = require("scripts.action_manager")
 	require("scripts.emote_keys")
 	KeyEmoteUp = require("scripts.actions.key_emote_up")
