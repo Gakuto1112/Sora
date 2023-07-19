@@ -41,7 +41,7 @@ EmotionAction = {
             FaceParts.setEmotion(self.RightEye, self.LeftEye, self.Mouth, self.AnimationCount, true)
         end
 		self.IsAnimationPlaying = true
-        ActionManager.IsAnimationPlaying = true
+        ActionWheel.IsAnimationPlaying = true
 		self.AnimationCount = self.AnimationLength
     end,
 
@@ -49,7 +49,7 @@ EmotionAction = {
     stop = function (self)
 		FaceParts.resetEmotion()
 		self.IsAnimationPlaying = false
-        ActionManager.IsAnimationPlaying = false
+        ActionWheel.IsAnimationPlaying = false
 		self.AnimationCount = -1
     end,
 

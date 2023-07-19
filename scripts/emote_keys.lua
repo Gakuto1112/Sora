@@ -16,22 +16,22 @@ function pings.emote_keys_left()
 end
 
 KeyManager.register("emote_keys__up", "key.keyboard.up", function ()
-    if not ActionManager.IsAnimationPlaying then
+    if not ActionWheel.IsAnimationPlaying then
         pings.emote_keys_up()
     end
 end)
 KeyManager.register("emote_keys__right", "key.keyboard.right", function ()
-    if not ActionManager.IsAnimationPlaying then
+    if not ActionWheel.IsAnimationPlaying then
         pings.emote_keys_right()
     end
 end)
 KeyManager.register("emote_keys__down", "key.keyboard.down", function ()
-    if not ActionManager.IsAnimationPlaying then
+    if not ActionWheel.IsAnimationPlaying then
         pings.emote_keys_down()
     end
 end)
 KeyManager.register("emote_keys__left", "key.keyboard.left", function ()
-    if not ActionManager.IsAnimationPlaying then
+    if not ActionWheel.IsAnimationPlaying then
         pings.emote_keys_left()
     end
 end)

@@ -32,7 +32,7 @@ events.TICK:register(function ()
                     vanilla_model.RIGHT_ITEM:setVisible(false)
                     models.models.main.Avatar.UpperBody.Arms.RightArm.RightArmBottom.RightNaginata:setVisible(true)
                 else
-                    vanilla_model.RIGHT_ITEM:setVisible(not ActionManager.IsAnimationPlaying)
+                    vanilla_model.RIGHT_ITEM:setVisible(not ActionWheel.IsAnimationPlaying)
                     if hasShield then
                         vanilla_model.LEFT_ITEM:setVisible(true)
                     end
@@ -83,7 +83,7 @@ events.TICK:register(function ()
                     vanilla_model.LEFT_ITEM:setVisible(false)
                     models.models.main.Avatar.UpperBody.Arms.LeftArm.LeftArmBottom.LeftNaginata:setVisible(true)
                 else
-                    if not ActionManager.IsAnimationPlaying then
+                    if not ActionWheel.IsAnimationPlaying then
                         vanilla_model.LEFT_ITEM:setVisible(true)
                         if hasShield then
                             vanilla_model.RIGHT_ITEM:setVisible(true)
