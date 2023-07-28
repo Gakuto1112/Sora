@@ -8,30 +8,17 @@ EmotionAction = {
 	---@param mouth FaceParts.MouthType 口の名前（"NONE"にすると変更されない）
     ---@param animationCount integer 表情を継続する時間
     new = function (rightEye, leftEye, tiredRightEye, tiredLeftEye, mouth, animationCount)
-        local instance = {}
-		instance.CanPlayAnimation = false --アニメーションが再生可能かどうか
-		instance.AnimationChecked = false --このチックでアニメーションが再生可能かどうかを確認したかどうか
-		instance.IsAnimationPlaying = false --アニメーションが再生中かどうか
-		instance.AnimationCount = -1 --アニメーションのタイミングを計るカウンター
+        local instance = General.instance(EmotionAction, AnimationAction, function ()
+            return true
+        end, nil, nil, nil, nil, 0)
 		instance.AnimationLength = animationCount
         instance.RightEye = rightEye
         instance.LeftEye = leftEye
         instance.TiredRightEye = tiredRightEye
         instance.TiredLeftEye = tiredLeftEye
         instance.Mouth = mouth
-        events.TICK:register(function ()
-			instance:onTickEvent()
-		end)
         return instance
     end,
-
-    ---コンストラクタでtickイベントに登録される関数
-	onTickEvent = function (self)
-		if self.IsAnimationPlaying then
-			self:onAnimationTick()
-		end
-		self.AnimationChecked = false
-	end,
 
     ---表情アクションを再生する。
     play = function (self)
@@ -41,7 +28,7 @@ EmotionAction = {
             FaceParts.setEmotion(self.RightEye, self.LeftEye, self.Mouth, self.AnimationCount, true)
         end
 		self.IsAnimationPlaying = true
-        ActionWheel.IsAnimationPlaying = true
+		ActionWheel.IsAnimationPlaying = true
 		self.AnimationCount = self.AnimationLength
     end,
 
@@ -49,17 +36,9 @@ EmotionAction = {
     stop = function (self)
 		FaceParts.resetEmotion()
 		self.IsAnimationPlaying = false
-        ActionWheel.IsAnimationPlaying = false
+		ActionWheel.IsAnimationPlaying = false
 		self.AnimationCount = -1
-    end,
-
-    ---アニメーション再生中に毎チック実行される関数
-	onAnimationTick = function (self)
-		if self.AnimationCount == 0 then
-			self:stop()
-		end
-		self.AnimationCount = (self.AnimationCount > 0 and not client:isPaused()) and self.AnimationCount - 1 or self.AnimationCount
-	end
+    end
 }
 
 return EmotionAction

@@ -37,12 +37,13 @@ events.RENDER:register(function ()
 	models.models.main.Avatar.UpperBody.Arms.RightArm:setPos(Arms.RightArmPosOffset)
 	models.models.main.Avatar.UpperBody.Arms.LeftArm:setPos(Arms.LeftArmPosOffset)
 	local leftHanded = player:isLeftHanded()
+	local umbrellaAdjust = Umbrella.IsUsing and not SitDown.IsAnimationPlaying
 	if Arms.ItemHeldContradicts then
-		models.models.main.Avatar.UpperBody.Arms.RightArm:setRot(vectors.vec3((Umbrella.IsUsing and leftHanded) and 20 or 0) + Arms.RightArmRotOffset - vanilla_model.RIGHT_ARM:getOriginRot())
-		models.models.main.Avatar.UpperBody.Arms.LeftArm:setRot(vectors.vec3((Umbrella.IsUsing and not leftHanded) and 20 or 0) + Arms.LeftArmRotOffset - vanilla_model.LEFT_ARM:getOriginRot())
+		models.models.main.Avatar.UpperBody.Arms.RightArm:setRot(vectors.vec3((umbrellaAdjust and leftHanded) and 20 or 0) + Arms.RightArmRotOffset - vanilla_model.RIGHT_ARM:getOriginRot())
+		models.models.main.Avatar.UpperBody.Arms.LeftArm:setRot(vectors.vec3((umbrellaAdjust and not leftHanded) and 20 or 0) + Arms.LeftArmRotOffset - vanilla_model.LEFT_ARM:getOriginRot())
 	else
-		models.models.main.Avatar.UpperBody.Arms.RightArm:setRot(vectors.vec3((Umbrella.IsUsing and leftHanded) and 20 or 0) + Arms.RightArmRotOffset)
-		models.models.main.Avatar.UpperBody.Arms.LeftArm:setRot(vectors.vec3((Umbrella.IsUsing and not leftHanded) and 20 or 0) + Arms.LeftArmRotOffset)
+		models.models.main.Avatar.UpperBody.Arms.RightArm:setRot(vectors.vec3((umbrellaAdjust and leftHanded) and 20 or 0) + Arms.RightArmRotOffset)
+		models.models.main.Avatar.UpperBody.Arms.LeftArm:setRot(vectors.vec3((umbrellaAdjust and not leftHanded) and 20 or 0) + Arms.LeftArmRotOffset)
 	end
 end)
 

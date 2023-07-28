@@ -6,6 +6,8 @@ events.ENTITY_INIT:register(function ()
 	KeyManager = require("scripts.key_manager")
 
 	--抽象クラス
+	AnimationAction = require("scripts.actions.animation_action")
+	PermanentAnimationAction = require("scripts.actions.permanent_animation_action")
 	EmotionAction = require("scripts.actions.emotion_action")
 
 	--パーツ別クラス
@@ -19,10 +21,13 @@ events.ENTITY_INIT:register(function ()
 	Ears = require("scripts.ears")
 	Naginata = require("scripts.naginata")
 	Umbrella = require("scripts.umbrella")
+	Nameplate = require("scripts.nameplate")
 
 	--機能別クラス
 	Hurt = require("scripts.hurt")
 	ActionWheel = require("scripts.action_wheel")
+	Camera = require("scripts.camera")
+	SitDown = require("scripts.actions.sit_down")
 	require("scripts.emote_keys")
 	KeyEmoteUp = require("scripts.actions.key_emote_up")
 	KeyEmoteRight = require("scripts.actions.key_emote_right")

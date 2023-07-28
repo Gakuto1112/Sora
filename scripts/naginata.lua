@@ -15,7 +15,7 @@ events.TICK:register(function ()
     local defense = player:getActiveItem().id == "minecraft:shield"
     for i = 1, 2 do
         local hasShield = heldItems[3 - i].id == "minecraft:shield"
-        Naginata.State[i] = (not (heldItems[i].id:find("^minecraft:.+_sword$") == nil or firstPerson or Arms.ItemHeldContradicts)) and ((leftHanded ~= (i == 1) and not (active and not hasShield) and not sleeping) and (defense and 4 or 2) or 1) or 0
+        Naginata.State[i] = (not (heldItems[i].id:find("^minecraft:.+_sword$") == nil or firstPerson or Arms.ItemHeldContradicts)) and ((leftHanded ~= (i == 1) and not (active and not hasShield) and not sleeping) and (defense and (SitDown.IsAnimationPlaying and 5 or 4) or (SitDown.IsAnimationPlaying and 3 or 2)) or 1) or 0
         if Naginata.State[i] == 2 then
             if player:getPose() == "CROUCHING" then
                 models.models.main.Avatar.LowerBody:setPos(i == 1 and 3 or -3)
