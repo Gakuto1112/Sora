@@ -21,6 +21,7 @@ events.ENTITY_INIT:register(function ()
 	Ears = require("scripts.ears")
 	Naginata = require("scripts.naginata")
 	Umbrella = require("scripts.umbrella")
+	Armor = require("scripts.armor")
 	Nameplate = require("scripts.nameplate")
 
 	--機能別クラス

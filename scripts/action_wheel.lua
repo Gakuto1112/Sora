@@ -52,11 +52,11 @@ function pings.main_action2(nameID)
 end
 
 function pings.main_action3_toggle()
-	--Armor.ShowArmor = true
+	Armor.ShowArmor = true
 end
 
 function pings.main_action3_untoggle()
-	--Armor.ShowArmor = false
+	Armor.ShowArmor = false
 end
 
 function pings.main_action5_toggle()
