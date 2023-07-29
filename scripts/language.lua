@@ -21,7 +21,8 @@ Language = {
 			action_wheel__main__action_4__title = "Show fox fires in first person: ",
 			action_wheel__main__action_5__title = "Umbrella sound: ",
 			action_wheel__main__action_6__title = "Always use umbrella: ",
-			action_wheel__main__action_7__title = "Show messages: "
+			action_wheel__main__action_7__title = "Show messages: ",
+			message__respawn = "Uyaaan... Could you be a little gentler?"
 		},
 		ja_jp = {
 			key_name__jerk_ears = "耳を動かす",
@@ -42,7 +43,8 @@ Language = {
 			action_wheel__main__action_4__title = "一人称視点での狐火の表示：",
 			action_wheel__main__action_5__title = "傘の開閉音：",
 			action_wheel__main__action_6__title = "常に傘をさす：",
-			action_wheel__main__action_7__title = "メッセージの表示："
+			action_wheel__main__action_7__title = "メッセージの表示：",
+			message__respawn = "うや～ん...。もう少し優しゅうしてくれしまへんか？"
 		}
 	},
 
