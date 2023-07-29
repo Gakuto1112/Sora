@@ -59,6 +59,14 @@ function pings.main_action3_untoggle()
 	--Armor.ShowArmor = false
 end
 
+function pings.main_action5_toggle()
+	Umbrella.Sound = true
+end
+
+function pings.main_action5_untoggle()
+	Umbrella.Sound = false
+end
+
 events.TICK:register(function ()
     if host:isHost() then
 		local isOpenActionWheel = action_wheel:isEnabled()
@@ -148,7 +156,20 @@ if host:isHost() then
 	end
 
     --アクション1-5. 傘の開閉音
-	ActionWheel.MainPage:newAction(5):title(Language.getTranslate("action_wheel__main__action_5__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_5__title")..Language.getTranslate("action_wheel__toggle_on")):item("note_block"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0)
+	ActionWheel.MainPage:newAction(5):title(Language.getTranslate("action_wheel__main__action_5__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_5__title")..Language.getTranslate("action_wheel__toggle_on")):item("note_block"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0):onToggle(function (_, action)
+		pings.main_action5_toggle()
+		action:hoverColor(0.33, 1, 0.33)
+		Config.saveConfig("umbrellaSound", true)
+	end):onUntoggle(function (_, action)
+		pings.main_action5_untoggle()
+		action:hoverColor(1, 0.33, 0.33)
+		Config.saveConfig("umbrellaSound", false)
+	end)
+	if Config.loadConfig("umbrellaSound", true) then
+		local action = ActionWheel.MainPage:getAction(5)
+		action:toggled(true)
+		action:hoverColor(0.33, 1, 0.33)
+	end
 
     --アクション1-6. 常に傘をさす
 	ActionWheel.MainPage:newAction(6):title(Language.getTranslate("action_wheel__main__action_6__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_6__title")..Language.getTranslate("action_wheel__toggle_on")):item("red_carpet"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0)
