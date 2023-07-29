@@ -20,7 +20,24 @@ events.TICK:register(function()
 			if playerBlock.id:find("^minecraft:.+bed$") then
 				facing = playerBlock.properties["facing"]
 			end
-			animations["models.main"]["sleep"]:play()
+			models.models.main.Avatar:setPos(0, 0, 2)
+			models.models.main.Avatar:setRot(-90, -70, 90)
+			models.models.main.Avatar.Head:setRot(0, 0, 15)
+			Arms.RightArmRotOffset = vectors.vec3(81.1041, -59.4247, 63.7095)
+			models.models.main.Avatar.UpperBody.Arms.RightArm.RightArmBottom:setRot(85)
+			Sleeve.RightSleeveRotOffset = vectors.vec3(21.1728, -118.7472, -7.096)
+			models.models.main.Avatar.UpperBody.Arms.LeftArm.LeftArmBottom:setRot(50)
+			Sleeve.LeftSleeveRotOffset = vectors.vec3(60.2836, 9.3913, 3.4512)
+			Physics.TailRotOffset = vectors.vec3(0, -40)
+			models.models.main.Avatar.UpperBody.Body.Tails.TailUL:setRot(2.4994, 19.965, 1.7094)
+			models.models.main.Avatar.UpperBody.Body.Tails.TailUR:setRot(-20, 35)
+			models.models.main.Avatar.UpperBody.Body.Tails.TailLL:setRot(44.1429, 2.5586, 20.2919)
+			models.models.main.Avatar.UpperBody.Body.Tails.TailLR:setRot(20, 35)
+			models.models.main.Avatar.LowerBody:setRot(0, 0, -20)
+			models.models.main.Avatar.LowerBody.RightLeg:setRot(2.5)
+			models.models.main.Avatar.LowerBody.RightLeg.RightLegBottom:setRot(-45)
+			models.models.main.Avatar.LowerBody.LeftLeg:setRot(40.1265, -23.337, 23.287)
+			models.models.main.Avatar.LowerBody.LeftLeg.LeftLegBottom:setRot(-72.5)
 			Physics.EnablePyhsics = false
 			Sleeve.Moving = false
 			local firstPerson = renderer:isFirstPerson()
@@ -41,8 +58,15 @@ events.TICK:register(function()
 	else
 		if isSleepingPrev then
 			models.models.main.Avatar.Head:setVisible(true)
+			models.models.main.Avatar:setPos()
+			for _, modelPart in ipairs({models.models.main.Avatar, models.models.main.Avatar.Head, models.models.main.Avatar.UpperBody.Arms.RightArm.RightArmBottom, models.models.main.Avatar.UpperBody.Arms.LeftArm.LeftArmBottom, models.models.main.Avatar.UpperBody.Body.Tails.TailUL, models.models.main.Avatar.UpperBody.Body.Tails.TailUR, models.models.main.Avatar.UpperBody.Body.Tails.TailLL, models.models.main.Avatar.UpperBody.Body.Tails.TailLR, models.models.main.Avatar.LowerBody, models.models.main.Avatar.LowerBody.RightLeg, models.models.main.Avatar.LowerBody.RightLeg.RightLegBottom, models.models.main.Avatar.LowerBody.LeftLeg, models.models.main.Avatar.LowerBody.LeftLeg.LeftLegBottom}) do
+				modelPart:setRot()
+			end
+			Arms:resetArmRotOffset()
+			Sleeve.RightSleeveRotOffset = vectors.vec3()
+			Sleeve.LeftSleeveRotOffset = vectors.vec3()
+			Physics.TailRotOffset = vectors.vec3()
 			Physics.EnablePyhsics = true
-			animations["models.main"]["sleep"]:stop()
 			Sleeve.Moving = true
 			renderer:setCameraRot()
 		end

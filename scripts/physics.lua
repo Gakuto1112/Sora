@@ -94,9 +94,12 @@ events.RENDER:register(function (_, context)
 				tailRot = vectors.vec3(math.clamp(rotLimit[1][1][2] - math.min(tailXMoveXZ, math.max(rotLimit[1][1][2] - tailXMoveY - tailXAngleMove - tailXConditionAngle, 0)) + tailXMoveY - math.min(tailXAngleMove, math.max(rotLimit[1][1][2] - tailXMoveXZ - tailXMoveY - tailXConditionAngle, 0)) - tailXConditionAngle, rotLimit[1][1][1], rotLimit[1][1][2]) + (player:isCrouching() and 30 or 0), math.clamp(Physics.VelocityAverage[6] * 160 + Physics.VelocityAverage[7] * 0.05, rotLimit[1][2][1], rotLimit[1][2][2]))
 			end
 		end
-	end
-	for index, modelPart in ipairs(models.models.main.Avatar.UpperBody.Body.Tails:getChildren()) do
-		modelPart:setRot(tailRot + Physics.TailRotOffset + vectors.vec3(index >= 3 and 20 or -20, index % 2 == 1 and -20 or 20))
+		models.models.main.Avatar.UpperBody.Body.Tails:setRot();
+		for index, modelPart in ipairs(models.models.main.Avatar.UpperBody.Body.Tails:getChildren()) do
+			modelPart:setRot(tailRot + Physics.TailRotOffset + vectors.vec3(index >= 3 and 20 or -20, index % 2 == 1 and -20 or 20))
+		end
+	else
+		models.models.main.Avatar.UpperBody.Body.Tails:setRot(tailRot + Physics.TailRotOffset);
 	end
 end)
 
