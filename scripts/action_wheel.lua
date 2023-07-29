@@ -132,7 +132,20 @@ if host:isHost() then
 	end
 
     --アクション1-4. 一人称視点での狐火の表示
-    ActionWheel.MainPage:newAction(4):title(Language.getTranslate("action_wheel__main__action_4__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_4__title")..Language.getTranslate("action_wheel__toggle_on")):item("soul_torch"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0)
+    ActionWheel.MainPage:newAction(4):title(Language.getTranslate("action_wheel__main__action_4__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_4__title")..Language.getTranslate("action_wheel__toggle_on")):item("soul_torch"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0):onToggle(function (_, action)
+		FoxFire.FoxFireInFirstPerson = true
+		action:hoverColor(0.33, 1, 0.33)
+		Config.saveConfig("foxFireInFirstPerson", true)
+	end):onUntoggle(function (_, action)
+		FoxFire.FoxFireInFirstPerson = false
+		action:hoverColor(1, 0.33, 0.33)
+		Config.saveConfig("foxFireInFirstPerson", false)
+	end)
+	if Config.loadConfig("foxFireInFirstPerson", true) then
+		local action = ActionWheel.MainPage:getAction(4)
+		action:toggled(true)
+		action:hoverColor(0.33, 1, 0.33)
+	end
 
     --アクション1-5. 傘の開閉音
 	ActionWheel.MainPage:newAction(5):title(Language.getTranslate("action_wheel__main__action_5__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_5__title")..Language.getTranslate("action_wheel__toggle_on")):item("note_block"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0)
