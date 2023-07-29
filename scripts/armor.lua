@@ -137,6 +137,7 @@ events.TICK:register(function ()
 				end
 			elseif index == 3 then
 				local leggingsFound = armorSlotItems[3].id:find("^minecraft:.+_leggings$") ~= nil
+				models.models.main.Avatar.UpperBody.Body.Hem:setVisible(not leggingsFound)
 				for _, armorPart in ipairs({models.models.main.Avatar.UpperBody.Body.ArmorB.Leggings, models.models.main.Avatar.LowerBody.RightLeg.ArmorRL.RightLeggings, models.models.main.Avatar.LowerBody.RightLeg.RightLegBottom.ArmorRLB.RightLeggingsBottom, models.models.main.Avatar.LowerBody.LeftLeg.ArmorLL.LeftLeggings, models.models.main.Avatar.LowerBody.LeftLeg.LeftLegBottom.ArmorLLB.LeftLeggingsBottom}) do
 					armorPart:setVisible(leggingsFound)
 				end
