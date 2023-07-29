@@ -51,6 +51,14 @@ function pings.main_action2(nameID)
 	end
 end
 
+function pings.main_action3_toggle()
+	--Armor.ShowArmor = true
+end
+
+function pings.main_action3_untoggle()
+	--Armor.ShowArmor = false
+end
+
 events.TICK:register(function ()
     if host:isHost() then
 		local isOpenActionWheel = action_wheel:isEnabled()
@@ -108,7 +116,20 @@ if host:isHost() then
     end)
 
     --アクション1-3. 防具の表示
-	ActionWheel.MainPage:newAction(3):title(Language.getTranslate("action_wheel__main__action_3__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_3__title")..Language.getTranslate("action_wheel__toggle_on")):item("iron_chestplate"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33)
+	ActionWheel.MainPage:newAction(3):title(Language.getTranslate("action_wheel__main__action_3__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_3__title")..Language.getTranslate("action_wheel__toggle_on")):item("iron_chestplate"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):onToggle(function (_, action)
+		pings.main_action3_toggle()
+		action:hoverColor(0.33, 1, 0.33)
+		Config.saveConfig("showArmor", true)
+	end):onUntoggle(function (_, action)
+		pings.main_action3_untoggle()
+		action:hoverColor(1, 0.33, 0.33)
+		Config.saveConfig("showArmor", false)
+	end)
+	if Config.loadConfig("showArmor", false) then
+		local action = ActionWheel.MainPage:getAction(3)
+		action:toggled(true)
+		action:hoverColor(0.33, 1, 0.33)
+	end
 
     --アクション1-4. 一人称視点での狐火の表示
     ActionWheel.MainPage:newAction(4):title(Language.getTranslate("action_wheel__main__action_4__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_4__title")..Language.getTranslate("action_wheel__toggle_on")):item("soul_torch"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0)
