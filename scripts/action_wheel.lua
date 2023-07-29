@@ -196,7 +196,22 @@ if host:isHost() then
 	end
 
     --アクション1-7. 頻出メッセージの表示
-	ActionWheel.MainPage:newAction(7):title(Language.getTranslate("action_wheel__main__action_7__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_7__title")..Language.getTranslate("action_wheel__toggle_on")):item("cake"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0)
+	ActionWheel.MainPage:newAction(7):title(Language.getTranslate("action_wheel__main__action_7__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_7__title")..Language.getTranslate("action_wheel__toggle_on")):item("cake"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0):onToggle(function (_, action)
+		General.ShowMessage = true
+		action:hoverColor(0.33, 1, 0.33)
+		Config.saveConfig("showMessage", true)
+	end):onUntoggle(function (_, action)
+		General.ShowMessage = false
+		action:hoverColor(1, 0.33, 0.33)
+		Config.saveConfig("showMessage", false)
+	end)
+	if Config.loadConfig("showMessage", true) then
+		local action = ActionWheel.MainPage:getAction(7)
+		action:toggled(true)
+		action:hoverColor(0.33, 1, 0.33)
+	else
+		General.ShowMessage = false
+	end
 
     setNameChangeActionTitle()
     action_wheel:setPage(ActionWheel.MainPage)
