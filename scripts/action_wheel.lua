@@ -67,6 +67,14 @@ function pings.main_action5_untoggle()
 	Umbrella.Sound = false
 end
 
+function pings.main_action6_toggle()
+	Umbrella.AlwaysUse = true
+end
+
+function pings.main_action6_untoggle()
+	Umbrella.AlwaysUse = false
+end
+
 events.TICK:register(function ()
     if host:isHost() then
 		local isOpenActionWheel = action_wheel:isEnabled()
@@ -172,7 +180,20 @@ if host:isHost() then
 	end
 
     --アクション1-6. 常に傘をさす
-	ActionWheel.MainPage:newAction(6):title(Language.getTranslate("action_wheel__main__action_6__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_6__title")..Language.getTranslate("action_wheel__toggle_on")):item("red_carpet"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0)
+	ActionWheel.MainPage:newAction(6):title(Language.getTranslate("action_wheel__main__action_6__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_6__title")..Language.getTranslate("action_wheel__toggle_on")):item("red_carpet"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0):onToggle(function (_, action)
+		pings.main_action6_toggle()
+		action:hoverColor(0.33, 1, 0.33)
+		Config.saveConfig("alwaysUmbrella", true)
+	end):onUntoggle(function (_, action)
+		pings.main_action6_untoggle()
+		action:hoverColor(1, 0.33, 0.33)
+		Config.saveConfig("alwaysUmbrella", false)
+	end)
+	if Config.loadConfig("alwaysUmbrella", false) then
+		local action = ActionWheel.MainPage:getAction(6)
+		action:toggled(true)
+		action:hoverColor(0.33, 1, 0.33)
+	end
 
     --アクション1-7. 頻出メッセージの表示
 	ActionWheel.MainPage:newAction(7):title(Language.getTranslate("action_wheel__main__action_7__title")..Language.getTranslate("action_wheel__toggle_off")):toggleTitle(Language.getTranslate("action_wheel__main__action_7__title")..Language.getTranslate("action_wheel__toggle_on")):item("cake"):color(0.67, 0, 0):hoverColor(1, 0.33, 0.33):toggleColor(0, 0.67, 0)
