@@ -90,7 +90,7 @@ events.RENDER:register(function (_, context)
 				local tailXMoveXZ = (Physics.VelocityAverage[5] + math.abs(Physics.VelocityAverage[6])) * 160
 				local tailXMoveY = Physics.VelocityAverage[2] * 80
 				local tailXAngleMove = math.abs(Physics.VelocityAverage[7]) * 0.05
-				local tailXConditionAngle = (General.PlayerCondition == "LOW" or player:getVehicle()) and 0 or (General.PlayerCondition == "MEDIUM" and 15 or 30)
+				local tailXConditionAngle = player:getVehicle() and 70 or ((General.PlayerCondition == "HIGH" or SitDown.IsAnimationPlaying) and 30 or (General.PlayerCondition == "MEDIUM" and 15 or 0))
 				tailRot = vectors.vec3(math.clamp(rotLimit[1][1][2] - math.min(tailXMoveXZ, math.max(rotLimit[1][1][2] - tailXMoveY - tailXAngleMove - tailXConditionAngle, 0)) + tailXMoveY - math.min(tailXAngleMove, math.max(rotLimit[1][1][2] - tailXMoveXZ - tailXMoveY - tailXConditionAngle, 0)) - tailXConditionAngle, rotLimit[1][1][1], rotLimit[1][1][2]) + (player:isCrouching() and 30 or 0), math.clamp(Physics.VelocityAverage[6] * 160 + Physics.VelocityAverage[7] * 0.05, rotLimit[1][2][1], rotLimit[1][2][2]))
 			end
 		end
