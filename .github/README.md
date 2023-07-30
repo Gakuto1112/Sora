@@ -127,7 +127,7 @@ Figuraには、アクションホイールキー（デフォルトは「B」キ�
 | 項目 | 推奨設定 | 備考 |
 | - | - | - |
 | Vanilla Model Change | **有効！！** | これが有効でないと、バニラのプレイヤーモデルが消えません！！ |
-| Nameplate Change | 有効 |　権限「Default」レベルでは無効になっています。 |
+| Nameplate Change | 有効 | 権限「Default」レベルでは無効になっています。 |
 | Custom Player Heads | 有効 | |
 
 ### マインクラフト設定
