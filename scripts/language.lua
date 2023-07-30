@@ -22,6 +22,7 @@ Language = {
 			action_wheel__main__action_5__title = "Umbrella sound: ",
 			action_wheel__main__action_6__title = "Always use umbrella: ",
 			action_wheel__main__action_7__title = "Show messages: ",
+			message__afk_too_long = "You, Whre have you been? You do the same thing to Sen, don't you? Don't make Sen sad.",
 			message__respawn = "Uyaaan... Could you be a little gentler?"
 		},
 		ja_jp = {
@@ -44,6 +45,7 @@ Language = {
 			action_wheel__main__action_5__title = "傘の開閉音：",
 			action_wheel__main__action_6__title = "常に傘をさす：",
 			action_wheel__main__action_7__title = "メッセージの表示：",
+			message__afk_too_long = "あんた、長時間どこに行っとったのでっしゃろか？センにもおんなじことしてへんどすなぁ？センをあんまり悲しませたらあきまへんえ。",
 			message__respawn = "うや～ん...。もう少し優しゅうしてくれしまへんか？"
 		}
 	},
