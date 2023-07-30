@@ -143,3 +143,10 @@ Figuraには、アクションホイールキー（デフォルトは「B」キ�
 - このアバターを使用して発生した、いかなる損害の責任も負いかねます。
 - このアバターは、デフォルトのリソースパックでの動作を想定しています。また、他MODの使用は想定していません。想定動作環境外ではテクスチャの不整合、防具が表示されない/非表示にならない、といった不具合が想定されます。この場合の不具合は対応しませんのでご了承下さい。
 - 不具合がありましたら、[Issues](https://github.com/Gakuto1112/SenkoSan/issues)までご連絡下さい。
+
+## リンク集
+- [Figura（Modrinth）](https://modrinth.com/mod/figura)
+- [Figura（GitHub）](https://github.com/Moonlight-MC-Temp/Figura)
+- [TVアニメ「世話やきキツネの仙狐さん」オフィシャルサイト](http://senkosan.com/)
+- [Amazon.co.jp_ 世話やきキツネの仙狐さんを観る _ Prime Video](https://www.amazon.co.jp/gp/video/detail/B07QJG9NP7)
+- [世話やきキツネの仙狐さん - Webで漫画が無料で読める！コミックNewtype](https://comic.webnewtype.com/contents/sewayaki/)
