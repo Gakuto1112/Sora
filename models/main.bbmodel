@@ -3735,7 +3735,7 @@
 			"to": [4, 22.5, 0],
 			"autouv": 0,
 			"color": 0,
-			"inflate": 0.5,
+			"inflate": 0.25,
 			"rotation": [45, 0, 0],
 			"origin": [0, 20.5, -2],
 			"faces": {
