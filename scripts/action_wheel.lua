@@ -89,7 +89,7 @@ events.TICK:register(function ()
             if playerNameState ~= currentPlayerNameState then
                 pings.main_action2(playerNameState)
                 Config.saveConfig("name", playerNameState)
-				sounds:playSound("minecraft:ui.cartography_table.take_result", player:getPos(), 1, 1)
+				sounds:playSound("minecraft:ui.cartography_table.take_result", player:getPos())
 				print(Language.getTranslate("action_wheel__main__action_2__done_first")..Nameplate.NameList[playerNameState]..Language.getTranslate("action_wheel__main__action_2__done_last"))
             end
         end
