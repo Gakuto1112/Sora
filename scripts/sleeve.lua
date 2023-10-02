@@ -75,6 +75,4 @@ Sleeve = {
 	end
 }
 
-Sleeve.enable()
-
 return Sleeve
