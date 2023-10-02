@@ -37,6 +37,4 @@ events.ENTITY_INIT:register(function ()
 	FoxFire = require("scripts.fox_fire")
 	Sleep = require("scripts.sleep")
 	require("scripts.afk")
-
-	print("Init")
 end)
