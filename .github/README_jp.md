@@ -158,12 +158,12 @@ Figuraには、アクションホイールキー（デフォルトは「B」キ�
 
 ***
 
-![仙狐とシロ1](./README_images/仙狐とシロ1.jpg)
+![仙狐とシロ1](./README_images/senko_and_shiro_1.jpg)
 
-![仙狐とシロ2](./README_images/仙狐とシロ2.jpg)
+![仙狐とシロ2](./README_images/senko_and_shiro_2.jpg)
 
-![仙狐とシロ3](./README_images/仙狐とシロ3.jpg)
+![仙狐とシロ3](./README_images/senko_and_shiro_3.jpg)
 
-![仙狐とシロ4](./README_images/仙狐とシロ4.jpg)
+![仙狐とシロ4](./README_images/senko_and_shiro_4.jpg)
 
-![仙狐とシロ5](./README_images/仙狐とシロ5.jpg)
+![仙狐とシロ5](./README_images/senko_and_shiro_5.jpg)
