@@ -16,9 +16,9 @@
 # Sora（夜空）
 TVアニメ「世話やきキツネの仙狐さん」とその原作に登場するキャラクターを再現した、MinecraftのスキンMod「[Figura](https://modrinth.com/mod/figura)」向けスキン「Sora（夜空）」です。
 
-ターゲットFiguraバージョン：[0.1.1](https://modrinth.com/mod/figura/version/0.1.1+1.20.1-0f8b7a9)
+ターゲットFiguraバージョン：[0.1.1](https://modrinth.com/mod/figura/version/0.1.1+1.20.1-0f8b7a9)~
 
-![メイン](./README_images/メイン.jpg)
+![メイン](./README_images/main.jpg)
 
 ## 特徴
 - 耳と尻尾のモデルが生えています。
