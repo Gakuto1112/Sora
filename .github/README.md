@@ -76,3 +76,41 @@ Target Figura versions: [0.1.1](https://modrinth.com/mod/figura/version/0.1.1+1.
   ![Foxfires](./README_images/foxfires.gif)
 
 ## The action wheel
+Figura provides the action wheel with which players can play some actions (emotes, animations, configs, and etc.). It will be shown when holding the action wheel key (default is B key). This avatar also has some actions.
+
+![The action wheel](./README_images/action_wheel.jpg)
+
+### Action 1. Sitting down
+Sits down there. She will stand up when playing this action again. She will also stand up when moving, jumping, or sneaking while setting down.
+
+![おすわり](./README_images/action_sit_down.jpg)
+
+### Action 2. Display name change
+Changes the player's display name. Scroll to select the name and closing the action wheel to confirm. Left-click to reset to current selection, and right-clock to reset to default during selection. However, **Other players also need to install Figura and give enough permissions** to see your display name.
+
+![Display name](./README_images/name_change.jpg)
+
+The name option which can be set are as follows:
+
+- &lt;Player name&gt;
+- Sora
+- 夜空
+
+### Action 3. Toggle armors visible
+Toggles whether equipped armors are visible or not. This setting will only affects to vanilla armors.
+
+### Action 4. Toggle foxfires visible in first person
+Toggles whether foxfires are visible or not in the first person. Turn this off if you are annoyed with them when looking up.
+
+![Foxfires](./README_images/foxfires.gif)
+
+### Action 5. Toggle umbrella open/close sound
+Toggles whether the umbrella open/closed sounds are played or not. Turn this off if you are annoyed with them.
+
+### Action 6. Toggle always umbrella use
+Toggles whether she always use umbrella when she can use it even if it isn't raining. Can be used for photo shoots.
+
+![Umbrella](./README_images/umbrella.jpg)
+
+### Action 7. Toggle frequently shown messages
+Toggles whether messages which are showed frequently show or not. This setting will not affects the action wheel messages. Turn this off if you are annoyed with them.
