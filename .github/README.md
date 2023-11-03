@@ -133,7 +133,7 @@ Figura is available in [Forge](https://files.minecraftforge.net/net/minecraftfor
 ## Notes
 - I'm not responsible for any damages caused by using this avatar.
 - This avatar is designed for work with no resource pack and no other mods are installed. An unexpected issue may occurs when you use it with any resource packs and mods (texture and armor inconsistencies, etc.). However, I won't support in these cases.
-- Please [report an issue](https://github.com/Gakuto1112/SenkoSan/issues) if you find it.
+- Please [report an issue](https://github.com/Gakuto1112/Sora/issues) if you find it.
 
 ## Links
 - [Figura（Modrinth）](https://modrinth.com/mod/figura)
