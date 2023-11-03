@@ -85,7 +85,7 @@ Sits down there. She will stand up when playing this action again. She will also
 
 ![おすわり](./README_images/action_sit_down.jpg)
 
-### Action 2. Display name change
+### Action 2. Change display name
 Changes the player's display name. Scroll to select the name and closing the action wheel to confirm. Left-click to reset to current selection, and right-clock to reset to default during selection. However, **Other players also need to install Figura and give enough permissions** to see your display name.
 
 ![Display name](./README_images/name_change.jpg)
