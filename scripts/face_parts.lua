@@ -4,6 +4,7 @@
 ---| "SURPLISED"
 ---| "TIRED"
 ---| "CLOSED"
+---| "ANGRY"
 
 ---@alias FaceParts.MouthType
 ---| "NONE"
@@ -18,15 +19,17 @@
 ---@field EyeTypeID { [string]: integer } EyeTypeとIDを紐付けるテーブル
 ---@field MouthTypeID { [string]: integer } MouthTypeとIDを紐付けるテーブル
 ---@field ComplexionID { [string]: integer } 顔色とIDを紐付けるテーブル
+---@field RightEyeStatus FaceParts.EyeType 現在の右目の状態
 ---@field EmotionCount integer エモートの時間を計るカウンター
 ---@field ComplexionCount integer 顔色の時間を計るカウンター
 ---@field BlinkCount integer 瞬きのタイミングを計るカウンター
 ---@field Drowned boolean 溺れているかどうか
 ---@field DrownedPrev boolean 前チックに溺れていたかどうか
 FaceParts = {
-	EyeTypeID = {NONE = 0, NORMAL = 1, SURPLISED = 2, TIRED = 3, CLOSED = 4},
+	EyeTypeID = {NONE = 0, NORMAL = 1, ANGRY = 2, SURPLISED = 3, TIRED = 4, CLOSED = 5},
 	MouthTypeID = {NONE = 0, CLOSED = 1, OPENED = 2},
 	ComplexionID = {NORMAL = 1, PALE = 2},
+	RightEyeStatus = "NORMAL",
 	EmotionCount = 0,
 	ComplexionCount = 0,
 	BlinkCount = 0,
@@ -47,9 +50,10 @@ FaceParts = {
 			if FaceParts.EyeTypeID[rightEye] > 0 then
 				rightEyePart:setUVPixels((FaceParts.EyeTypeID[rightEye] - 1) * 6, 0)
 			end
+			FaceParts.RightEyeStatus = rightEye
 			--左目
-			if FaceParts.EyeTypeID[leftEye] == 1 then
-				leftEyePart:setUVPixels(0, 6)
+			if FaceParts.EyeTypeID[leftEye] <= 2 then
+				leftEyePart:setUVPixels((FaceParts.EyeTypeID[leftEye] - 1) * 6, 6)
 			elseif FaceParts.EyeTypeID[leftEye] > 0 then
 				leftEyePart:setUVPixels((FaceParts.EyeTypeID[leftEye] - 1) * 6, 0)
 			end
