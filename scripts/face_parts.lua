@@ -101,7 +101,7 @@ events.TICK:register(function ()
 		FaceParts.BlinkCount = FaceParts.BlinkCount + 1
 	end
 	if FaceParts.ComplexionCount == 0 then
-		FaceParts.setComplexion(player:getFrozenTicks() == 140 and "PALE" or "NORMAL", 0, false)
+		FaceParts.setComplexion(player:getFrozenTicks() > 0 and "PALE" or "NORMAL", 0, false)
 	end
 	if host:isHost() then
 		FaceParts.Drowned = host:getAir() <= 0 and General.getTargetEffect("minecraft.water_breathing") == nil
